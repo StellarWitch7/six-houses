@@ -71,7 +71,7 @@ dependencies {
 	// To change the versions see the gradle.properties file
 	minecraft "com.mojang:minecraft:${property('deps.minecraft')}"
 	mappings "net.fabricmc:yarn:${property('deps.yarn')}:v2"
-	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+	modImplementation "net.fabricmc:fabric-loader:${property('deps.floader')}"
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${property('deps.fabric-api')}"
@@ -91,6 +91,7 @@ dependencies {
 	include modImplementation("org.ladysnake.cardinal-components-api:cardinal-components-entity:${property('deps.cardinal-components-api')}")
 
 	modImplementation "com.terraformersmc:modmenu:${property('deps.modmenu')}"
+	modImplementation "maven.modrinth:trickster:${property('deps.trickster')}"
 	modClientCompileOnly "maven.modrinth:sodium:${property('deps.sodium')}"
 
 	modImplementation("io.wispforest:accessories-fabric:${property('deps.accessories')}")
