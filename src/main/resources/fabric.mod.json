@@ -1,0 +1,53 @@
+{
+	"schemaVersion": 1,
+	"id": "six-houses",
+	"version": "${version}",
+	"name": "Six Houses",
+	"description": "Six Houses of magic!",
+	"authors": [
+		"StellarWitch7"
+	],
+	"contact": {
+		"homepage": "https://github.com/StellarWitch7/six-houses",
+		"sources": "https://github.com/StellarWitch7/six-houses"
+	},
+	"license": "MIT",
+	"icon": "assets/six-houses/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			{
+				"value": "stellarwitch7.six_houses.SixHouses",
+				"adapter": "kotlin"
+			}
+		],
+		"client": [
+			{
+				"value": "stellarwitch7.six_houses.SixHousesClient",
+				"adapter": "kotlin"
+			}
+		],
+		"fabric-datagen": [
+			{
+				"value": "stellarwitch7.six_houses.SixHousesDataGenerator",
+				"adapter": "kotlin"
+			}
+		]
+	},
+	"mixins": [
+		"six-houses.mixins.json",
+		{
+			"config": "six-houses.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*",
+		"fabric-language-kotlin": "*"
+	},
+	"suggests": {
+	}
+}
