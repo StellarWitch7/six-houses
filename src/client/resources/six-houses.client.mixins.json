@@ -1,10 +1,14 @@
 {
-	"required": true,
-	"package": "stellarwitch7.six_houses.mixin.client",
-	"compatibilityLevel": "JAVA_21",
-	"client": [
-	],
-	"injectors": {
-		"defaultRequire": 1
-	}
+  "required": true,
+  "package": "stellarwitch7.six_houses.mixin.client",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "mixins": [
+    "EntityMixin",
+    "LivingEntityMixin"
+  ]
 }

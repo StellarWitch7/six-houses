@@ -10,7 +10,8 @@ import org.ladysnake.cca.api.v3.component.tick.ServerTickingComponent
 import stellarwitch7.six_houses.house.House
 
 class WitchComponent(private val player: PlayerEntity) : ServerTickingComponent {
-    private var house: House? = null
+    var house: House? = null
+        private set
 
     override fun readFromNbt(tag: NbtCompound, registryLookup: RegistryWrapper.WrapperLookup) {
         val result: DataResult<House> = House.codec.codec().parse(NbtOps.INSTANCE, tag.get("house"))

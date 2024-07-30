@@ -8,5 +8,5 @@ import stellarwitch7.six_houses.SixHouses
 object ModEntityComponents : CCAEntityComponentRegistrar() {
     override val modID: String = SixHouses.MOD_ID
 
-    val WITCH: ComponentKey<WitchComponent> = register("witch", WitchComponent::class, ::WitchComponent, RespawnCopyStrategy.ALWAYS_COPY)
+    val witch: ComponentKey<WitchComponent> = register("witch", WitchComponent::class, ::WitchComponent, RespawnCopyStrategy.ALWAYS_COPY)
 }
