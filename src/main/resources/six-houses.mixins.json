@@ -1,10 +1,11 @@
 {
-	"required": true,
-	"package": "stellarwitch7.six_houses.mixin",
-	"compatibilityLevel": "JAVA_21",
-	"mixins": [
-	],
-	"injectors": {
-		"defaultRequire": 1
+  "required": true,
+  "package": "stellarwitch7.six_houses.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "trickster.AddVelocityTrickMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
 	}
 }

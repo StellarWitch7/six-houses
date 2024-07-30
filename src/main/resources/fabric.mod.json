@@ -32,6 +32,12 @@
 				"value": "stellarwitch7.six_houses.SixHousesDataGenerator",
 				"adapter": "kotlin"
 			}
+		],
+		"cardinal-components-entity": [
+			{
+				"value":"stellarwitch7.six_houses.cca.entity.ModEntityComponents",
+				"adapter": "kotlin"
+			}
 		]
 	},
 	"mixins": [
@@ -41,12 +47,19 @@
 			"environment": "client"
 		}
 	],
+	"custom": {
+		"cardinal-components": [
+			"six-houses:witch"
+		]
+	},
 	"depends": {
 		"fabricloader": ">=0.15.11",
 		"minecraft": "~1.21",
 		"java": ">=21",
 		"fabric-api": "*",
-		"fabric-language-kotlin": "*"
+		"fabric-language-kotlin": "*",
+		"libstellar": "*",
+		"trickster": "2.0.0-alpha.3"
 	},
 	"suggests": {
 	}

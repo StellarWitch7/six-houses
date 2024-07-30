@@ -1,16 +1,20 @@
 package stellarwitch7.six_houses.house
 
-import com.google.common.base.Supplier
-import com.google.common.base.Suppliers
-import com.mojang.serialization.MapCodec
+import net.minecraft.registry.Registry
 import net.minecraft.server.network.ServerPlayerEntity
+import stellarwitch7.libstellar.registry.codec.CodecRegistrar
+import stellarwitch7.libstellar.registry.codec.CodecType
+import stellarwitch7.libstellar.registry.codec.CodecTypeProvider
+import stellarwitch7.six_houses.SixHouses
 
-interface House {
+interface House : CodecTypeProvider<House> {
     fun tick(player: ServerPlayerEntity)
 
-    fun type(): HouseType<*>
+    companion object : CodecRegistrar<House> {
+        override val modID: String = SixHouses.MOD_ID
+        override val registry: Registry<CodecType<House>> = makeReg()
+        override val name: String = "house_type"
 
-    companion object {
-        val CODEC: Supplier<MapCodec<House>> = Suppliers.memoize { HouseType.REGISTRY.codec.dispatchMap(House::type, HouseType<*>::codec) }
+        val storm: CodecType<House> = register("storm", StormHouse.codec)
     }
 }
