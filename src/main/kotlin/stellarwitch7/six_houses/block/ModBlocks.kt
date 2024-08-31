@@ -5,7 +5,7 @@ import stellarwitch7.six_houses.SixHouses
 
 object ModBlocks : BlockRegistrar {
     override val modID: String
-        get() = SixHouses.MOD_ID
+        get() = SixHouses.modID
 
     val WILD_ALTAR: WildAltarBlock = register("wild_altar_block", WildAltarBlock())
 }

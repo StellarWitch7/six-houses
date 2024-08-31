@@ -9,16 +9,16 @@ import stellarwitch7.six_houses.block.ModBlocks
 import stellarwitch7.six_houses.block.entity.ModBlockEntityTypes
 
 object SixHouses : ModInitializer {
-	val MOD_ID: String = "six-houses"
-    val LOGGER: Logger = LoggerFactory.getLogger(MOD_ID)
+	val modID: String = "six-houses"
+    val logger: Logger = LoggerFactory.getLogger(modID)
 
 	override fun onInitialize() {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
-		LOGGER.info("-- init --")
-		LOGGER.info("By this oath I pledge myself, to my House as I have my coven, to serve until my blood has hollowed me out")
-		LOGGER.info("-- init --")
+		logger.info("-- init --")
+		logger.info("By this oath I pledge myself, to my House as I have my coven, to serve until my blood has hollowed me out")
+		logger.info("-- init --")
 
 		ModItems.register()
 		ModBlocks.register()
@@ -26,6 +26,6 @@ object SixHouses : ModInitializer {
 	}
 
 	fun id(name: String): Identifier {
-		return Identifier.of(MOD_ID, name)
+		return Identifier.of(modID, name)
 	}
 }

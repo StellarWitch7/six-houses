@@ -9,9 +9,10 @@ import stellarwitch7.six_houses.SixHouses
 
 interface House : CodecTypeProvider<House> {
     fun tick(player: ServerPlayerEntity)
+    fun triggerPrimaryAbility(player: ServerPlayerEntity)
 
     companion object : CodecRegistrar<House> {
-        override val modID: String = SixHouses.MOD_ID
+        override val modID: String = SixHouses.modID
         override val name: String = "house_type"
         override val registry: Registry<CodecType<House>> = makeReg()
 

@@ -95,10 +95,12 @@ dependencies {
 	include modImplementation("org.ladysnake.cardinal-components-api:cardinal-components-base:${property('deps.cardinal-components-api')}")
 	include modImplementation("org.ladysnake.cardinal-components-api:cardinal-components-entity:${property('deps.cardinal-components-api')}")
 	include modImplementation("org.ladysnake.cardinal-components-api:cardinal-components-chunk:${property('deps.cardinal-components-api')}")
+	include modImplementation("org.ladysnake.cardinal-components-api:cardinal-components-world:${property('deps.cardinal-components-api')}")
+	include modImplementation("org.ladysnake.cardinal-components-api:cardinal-components-block:${property('deps.cardinal-components-api')}")
 
-	modImplementation "com.terraformersmc:modmenu:${property('deps.modmenu')}"
 	modImplementation "maven.modrinth:trickster:${property('deps.trickster')}"
 	modImplementation "io.wispforest:accessories-fabric:${property('deps.accessories')}"
+	modImplementation "com.terraformersmc:modmenu:${property('deps.modmenu')}"
 
 	modClientCompileOnly "maven.modrinth:sodium:${property('deps.sodium')}"
 }

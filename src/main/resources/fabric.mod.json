@@ -59,7 +59,7 @@
 		"fabric-api": "*",
 		"fabric-language-kotlin": "*",
 		"libstellar": "*",
-		"trickster": "2.0.0-alpha.3"
+		"trickster": "2.0.0-alpha.26"
 	},
 	"suggests": {
 	}

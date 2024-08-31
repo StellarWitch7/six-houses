@@ -13,6 +13,10 @@ class BoneHouse(private var spiritCasts: Int, private var inSpiritView: Boolean)
     override fun tick(player: ServerPlayerEntity) {
     }
 
+    override fun triggerPrimaryAbility(player: ServerPlayerEntity) {
+        TODO("Not yet implemented")
+    }
+
     fun getInSpiritView(): Boolean {
         return inSpiritView
     }

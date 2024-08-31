@@ -17,7 +17,7 @@ class WitchComponent(private val player: PlayerEntity) : ServerTickingComponent 
         val result: DataResult<House> = House.codec.codec().parse(NbtOps.INSTANCE, tag.get("house"))
 
         if (result.hasResultOrPartial())
-            house = result.resultOrPartial().orElseThrow();
+            house = result.resultOrPartial().orElseThrow()
     }
 
     override fun writeToNbt(tag: NbtCompound, registryLookup: RegistryWrapper.WrapperLookup) {
@@ -28,6 +28,10 @@ class WitchComponent(private val player: PlayerEntity) : ServerTickingComponent 
 
     override fun serverTick() {
         house?.tick(player as ServerPlayerEntity)
+    }
+
+    fun triggerPrimaryAbility() {
+        house?.triggerPrimaryAbility(player as ServerPlayerEntity)
     }
 
     fun claimHouse(house: House) {

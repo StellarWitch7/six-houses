@@ -14,6 +14,10 @@ class StormHouse(private var deflectCooldown: Int) : House {
         deflectCooldown = if (deflectCooldown < 0) 0 else deflectCooldown - 1
     }
 
+    override fun triggerPrimaryAbility(player: ServerPlayerEntity) {
+        TODO("Not yet implemented")
+    }
+
     companion object {
         val codec: MapCodec<StormHouse> = RecordCodecBuilder.mapCodec { instance -> instance.group(
             Codec.INT.fieldOf("deflect_cooldown").forGetter(StormHouse::deflectCooldown)

@@ -18,10 +18,9 @@ public abstract class EntityMixin {
 
     @ModifyReturnValue(method = "isGlowing", at = @At("RETURN"))
     private boolean maybeIAm(boolean original) {
-        if (world.isClient && MinecraftClient.getInstance().player instanceof PlayerEntity player) {
-            return original || (HouseQueriesKt.isInSpiritView() && player.getPos().distanceTo(pos) < 25);
-        }
-
-        return original;
+        return original || (world.isClient
+                && (MinecraftClient.getInstance().player instanceof PlayerEntity player)
+                && HouseQueriesKt.isInSpiritView()
+                && player.getPos().distanceTo(pos) < 25);
     }
 }
