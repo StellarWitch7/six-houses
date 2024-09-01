@@ -3,6 +3,7 @@
   "package": "stellarwitch7.six_houses.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "lavender.LavenderBookItemMixin",
     "trickster.AddVelocityTrickMixin"
   ],
   "injectors": {
