@@ -35,6 +35,7 @@ class WitchComponent(private val player: PlayerEntity) : ServerTickingComponent 
     }
 
     fun claimHouse(house: House) {
-        this.house = house;
+        if (this.house != null)
+            this.house = house
     }
 }

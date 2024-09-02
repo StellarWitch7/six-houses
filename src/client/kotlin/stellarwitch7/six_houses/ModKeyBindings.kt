@@ -16,7 +16,8 @@ object ModKeyBindings {
 
     fun register() {
         ClientTickEvents.END_CLIENT_TICK.register { client ->
-            val player = client.player;
+            val player = client.player
+
             if (player != null && client.currentScreen == null) {
                 if (activateAbility.wasPressed()) {
                     ModNetworking.channel.clientHandle().send(ActivatePrimaryAbilityPacket())

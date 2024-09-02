@@ -26,7 +26,7 @@ class SacrificialBladeItem : ToolItem(ToolMaterials.IRON, Settings()) {
 //                    player.damage(/*TODO*/, Float.MIN_VALUE)
                     player.health = 1F
 
-                    return ActionResult.CONSUME
+                    return ActionResult.success(world.isClient())
                 }
             }
 
