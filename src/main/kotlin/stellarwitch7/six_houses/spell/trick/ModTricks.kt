@@ -8,7 +8,7 @@ import stellarwitch7.six_houses.SixHouses
 import stellarwitch7.six_houses.spell.trick.house.bone.SummonZombieTrick
 
 object ModTricks : Registrar<Trick> {
-    override val modID: String = SixHouses.modID
+    override val modID: String = SixHouses.MOD_ID
     override val registry: Registry<Trick> = Tricks.REGISTRY
 
     // BONE

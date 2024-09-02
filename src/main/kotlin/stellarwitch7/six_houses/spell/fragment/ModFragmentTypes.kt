@@ -6,6 +6,6 @@ import stellarwitch7.libstellar.registry.Registrar
 import stellarwitch7.six_houses.SixHouses
 
 object ModFragmentTypes : Registrar<FragmentType<*>> {
-    override val modID: String = SixHouses.modID
+    override val modID: String = SixHouses.MOD_ID
     override val registry: Registry<FragmentType<*>> = FragmentType.REGISTRY
 }

@@ -8,7 +8,7 @@ import stellarwitch7.six_houses.net.ActivatePrimaryAbilityPacket
 import stellarwitch7.six_houses.net.ModNetworking
 
 object ModKeyBindings {
-    val activateAbility: KeyBinding = register(KeyBinding("key.six-houses.activate_ability", GLFW.GLFW_KEY_V, SixHouses.modID))
+    val activateAbility: KeyBinding = register(KeyBinding("key.six-houses.activate_ability", GLFW.GLFW_KEY_V, SixHouses.MOD_ID))
 
     fun register(binding: KeyBinding): KeyBinding {
         return KeyBindingHelper.registerKeyBinding(binding)

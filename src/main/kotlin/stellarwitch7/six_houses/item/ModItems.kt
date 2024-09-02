@@ -8,7 +8,7 @@ import stellarwitch7.six_houses.block.ModBlocks
 
 object ModItems : ItemRegistrar {
     override val modID: String
-        get() = SixHouses.modID
+        get() = SixHouses.MOD_ID
 
     val grimoire: GrimoireItem = register("grimoire", GrimoireItem())
     val sacrificialBlade: SacrificialBladeItem = register("blade_of_sacrifice", SacrificialBladeItem())

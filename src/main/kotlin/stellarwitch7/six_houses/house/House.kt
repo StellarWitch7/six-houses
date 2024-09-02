@@ -12,9 +12,8 @@ interface House : CodecTypeProvider<House> {
     fun triggerPrimaryAbility(player: ServerPlayerEntity)
 
     companion object : CodecRegistrar<House> {
-        override val modID: String = SixHouses.modID
-        override val name: String = "house_type"
-        override val registry: Registry<CodecType<House>> = makeReg()
+        override val modID: String = SixHouses.MOD_ID
+        override val registry: Registry<CodecType<House>> = makeReg("house")
 
         val storm: CodecType<House> = register("storm", StormHouse.codec)
         val bone: CodecType<House> = register("bone", BoneHouse.codec)

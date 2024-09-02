@@ -1,2 +1,8 @@
 key.six-houses:
   activate_ability: Use active House ability
+
+item.six-houses:
+  blade_of_sacrifice: Sacrificial Blade
+
+block.six-houses:
+  wild_altar: Altar

@@ -21,6 +21,7 @@ class SacrificialBladeItem : ToolItem(ToolMaterials.IRON, Settings()) {
             val blockEntity = world.getBlockEntity(pos)
 
             if (blockEntity is WildAltarBlockEntity) {
+                //TODO: this should use a stone tablet on the ritual instead to select which ritual
                 if (blockEntity.tryStartRitual(InitiationRitual(pos, ArrayDeque()).init(world))) {
                     player.clearStatusEffects()
 //                    player.damage(/*TODO*/, Float.MIN_VALUE)

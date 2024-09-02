@@ -7,7 +7,7 @@ import stellarwitch7.six_houses.block.ModBlocks
 
 object ModBlockEntityTypes : BlockEntityTypeRegistrar {
     override val modID: String
-        get() = SixHouses.modID
+        get() = SixHouses.MOD_ID
 
     val wildAltar: BlockEntityType<WildAltarBlockEntity> = register("wild_altar", BlockEntityType.Builder.create(::WildAltarBlockEntity, ModBlocks.wildAltar).build(null))
 }

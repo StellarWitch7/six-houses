@@ -7,10 +7,12 @@ import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import stellarwitch7.six_houses.block.ModBlocks
 import stellarwitch7.six_houses.block.entity.ModBlockEntityTypes
+import stellarwitch7.six_houses.ritual.ModRituals
+import stellarwitch7.six_houses.spell.trick.ModTricks
 
 object SixHouses : ModInitializer {
-	val modID: String = "six-houses"
-    val logger: Logger = LoggerFactory.getLogger(modID)
+	const val MOD_ID: String = "six-houses"
+    val logger: Logger = LoggerFactory.getLogger(MOD_ID)
 
 	override fun onInitialize() {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
@@ -23,9 +25,11 @@ object SixHouses : ModInitializer {
 		ModItems.register()
 		ModBlocks.register()
 		ModBlockEntityTypes.register()
+		ModTricks.register()
+		ModRituals.register()
 	}
 
 	fun id(name: String): Identifier {
-		return Identifier.of(modID, name)
+		return Identifier.of(MOD_ID, name)
 	}
 }

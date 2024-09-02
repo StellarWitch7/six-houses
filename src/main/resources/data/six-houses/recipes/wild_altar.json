@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " C ",
+    "CSC",
+    "SFS"
+  ],
+  "key": {
+    "C": {
+      "item": "minecraft:red_carpet"
+    },
+    "S": {
+      "item": "minecraft:stone_slab"
+    },
+    "F": {
+      "item": "minecraft:stone"
+    }
+  },
+  "result": {
+    "id": "six-houses:wild_altar",
+    "count": 1
+  }
+}

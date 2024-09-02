@@ -5,7 +5,7 @@ import net.minecraft.block.entity.BlockEntity
 import net.minecraft.server.world.ServerWorld
 import net.minecraft.util.math.BlockPos
 import net.minecraft.world.World
-import stellarwitch7.six_houses.ritual.Ritual
+import stellarwitch7.libstellar.ritual.Ritual
 
 class WildAltarBlockEntity(pos: BlockPos, state: BlockState) : BlockEntity(ModBlockEntityTypes.wildAltar, pos, state) {
     private var ritual: Ritual? = null

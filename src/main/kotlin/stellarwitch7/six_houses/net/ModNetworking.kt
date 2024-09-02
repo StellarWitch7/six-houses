@@ -5,7 +5,7 @@ import stellarwitch7.libstellar.registry.owo.net.OwoPacketRegistrar
 import stellarwitch7.six_houses.SixHouses
 
 object ModNetworking : OwoPacketRegistrar {
-    override val modID: String = SixHouses.modID
+    override val modID: String = SixHouses.MOD_ID
     override val name: String = "main"
     override val channel: OwoNetChannel = makeChannel()
 

@@ -14,7 +14,7 @@ class WitchComponent(private val player: PlayerEntity) : ServerTickingComponent 
         private set
 
     override fun readFromNbt(tag: NbtCompound, registryLookup: RegistryWrapper.WrapperLookup) {
-        val result: DataResult<House> = House.codec.codec().parse(NbtOps.INSTANCE, tag.get("house"))
+        val result: DataResult<House> = House.codec.parse(NbtOps.INSTANCE, tag.get("house"))
 
         if (result.hasResultOrPartial())
             house = result.resultOrPartial().orElseThrow()
@@ -22,7 +22,7 @@ class WitchComponent(private val player: PlayerEntity) : ServerTickingComponent 
 
     override fun writeToNbt(tag: NbtCompound, registryLookup: RegistryWrapper.WrapperLookup) {
         house?.let {
-            tag.put("house", House.codec.codec().encodeStart(NbtOps.INSTANCE, it).result().orElseThrow())
+            tag.put("house", House.codec.encodeStart(NbtOps.INSTANCE, it).result().orElseThrow())
         }
     }
 

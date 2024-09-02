@@ -4,8 +4,10 @@ import net.minecraft.entity.EntityType
 import net.minecraft.server.world.ServerWorld
 import net.minecraft.util.math.BlockPos
 import stellarwitch7.libstellar.registry.codec.CodecType
+import stellarwitch7.libstellar.ritual.Ritual
+import stellarwitch7.libstellar.ritual.step.*
 import stellarwitch7.six_houses.item.ModItems
-import stellarwitch7.six_houses.ritual.step.*
+import stellarwitch7.six_houses.ritual.ModRituals.initiation
 
 class InitiationRitual(pos: BlockPos, steps: ArrayDeque<Step>) : Ritual(pos, steps) {
     override val type: CodecType<Ritual> = initiation
